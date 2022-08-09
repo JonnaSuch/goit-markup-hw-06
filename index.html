@@ -460,68 +460,91 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
-        <h2 class="modal-form-title">Zostaw swoje dane w formularzu ponizej</h2>
+        <h2 class="modal-form-title">Zostaw swoje dane w formularzu poniżej</h2>
         <div class="modal-form">
           <form name="modal-form">
             <ul class="list-style-none">
               <li class="form-item">
                 <label class="form-label">
                   <span class="form-span">Imię</span>
-                  <input type="text" name="name" />
-                  <svg class="input-icon" width="12" height="12">
-                    <use
-                      href="./images/icons.svg#icon-person-black-18dp-1"
-                    ></use>
-                  </svg>
                 </label>
+                <svg class="input-icon" width="12" height="12">
+                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+                </svg>
+                <input
+                  class="input-box"
+                  type="text"
+                  id="modal-username"
+                  name="username"
+                  required
+                />
               </li>
               <li class="form-item">
                 <label class="form-label">
                   <span class="form-span">Telefon</span>
-                  <input type="tel" name="phone_number" />
-                  <svg class="input-icon" width="13" height="13">
-                    <use
-                      href="./images/icons.svg#icon-phone-black-18dp-1"
-                    ></use>
-                  </svg>
                 </label>
+                <svg class="input-icon" width="13" height="13">
+                  <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+                </svg>
+                <input
+                  class="input-box"
+                  type="tel"
+                  id="modal-phone-number"
+                  name="phone_number"
+                  required
+                />
               </li>
               <li class="form-item">
                 <label class="form-label">
                   <span class="form-span">Email</span>
-                  <input type="email" name="email" />
-                  <svg class="input-icon" width="15" height="12">
-                    <use
-                      href="./images/icons.svg#icon-email-black-18dp-1"
-                    ></use>
-                  </svg>
                 </label>
+                <svg class="input-icon" width="15" height="12">
+                  <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+                </svg>
+                <input
+                  class="input-box"
+                  type="email"
+                  id="modal-email"
+                  name="email"
+                  required
+                />
               </li>
               <li class="form-item">
                 <label class="form-label">
                   <span class="form-span">Komentarz</span>
                 </label>
                 <textarea
-                  name="feedback"
-                  rows="6"
+                  class="input-box"
+                  id="modal-comment"
                   placeholder="Wprowadź tekst"
+                  name="comment"
+                  maxlength="120"
+                  required
                 ></textarea>
               </li>
-              <li>
-                <div>
-                  <input />
-                  <svg width="11" height="8">
+              <li class="form-item-checkbox">
+                <div class="form-checkbox">
+                  <input
+                    class="checkbox-input"
+                    id="checbox"
+                    type="checkbox"
+                    name="checkbox"
+                  />
+                  <svg class="checkbox-svg" width="11" height="8">
                     <use href="./images/icons.svg#icon-Vector-1"></use>
                   </svg>
                 </div>
                 <label class="form-label">
-                  <span class="form-span"
-                    >Oświadczam iz akceptuję <a>Regulamin</a> i
-                    <a>Politykę Prywatności </a></span
+                  <span class="checkbox-text"
+                    >Oświadczam, iż akceptuję
+                    <a class="blue-text" href="">Regulamin</a> i
+                    <a class="blue-text" href=""
+                      >Politykę Prywatności.
+                    </a></span
                   >
                 </label>
               </li>
-              <li><button type="submit">Wyślij</button></li>
+              <li><button class="button-form" type="submit">Wyślij</button></li>
             </ul>
           </form>
         </div>

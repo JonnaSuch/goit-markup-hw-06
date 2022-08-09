@@ -192,10 +192,11 @@ button:hover {
   line-height: 1.16;
   letter-spacing: 0.01em;
   border: 1 px solid rgba (33, 33, 33, 0.2);
+  border-radius: 4px;
   padding-top: 12px;
   padding-left: 16px;
 }
-.form-input {
+.form-item input {
   border: 1px solid rgba (33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 0;
@@ -203,13 +204,102 @@ button:hover {
   width: 448px;
   height: 40px;
 }
-textarea::placeholder {
+.modal-form textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+.form-item svg {
+  position: absolute;
+  left: 55px;
+  top: 42px;
 }
 .input-icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
+}
+.input-box {
+  transition: outline 250ms, border 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-box:focus {
+  outline: var(--brand-color);
+  border: 1px solid var(--brand-color);
+}
+.form-item:focus-within {
+  fill: var(--brand-color);
+}
+.form-item-checkbox {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-checkbox {
+  position: relative;
+  width: 16px;
+  height: 15px;
+  margin-top: 5px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: border-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 16px;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+  appearance: none;
+  cursor: pointer;
+}
+.checkbox-svg {
+  position: absolute;
+  width: 17px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  fill: #fff;
+  opacity: 0;
+  transition: opacity 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--color-third);
+}
+.checkbox-input:checked + .checkbox-svg {
+  opacity: 1;
+}
+.form-checkbox:hover {
+  border-color: var(--brand-color);
+}
+.button-form {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  list-style: 1.8;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  background-color: var(--brand-color);
+  text-align: center;
+  align-items: center;
+  margin-left: 164px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms, color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .first-link {
   position: relative;
