@@ -747,21 +747,18 @@ button:hover {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  color: #ffffff;
   background-color: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms, fill 250 ms, color 250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.newsletter-button span {
-  color: #ffffff;
-}
 .newsletter-button span {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
   margin: 0;
+  color: var(--color-white);
 }
 .newsletter-button svg {
   margin-left: 24px;
